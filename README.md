@@ -8,4 +8,7 @@ Ze względu na nieposiadanie wiedzy w tym kierunku stwierdziłam, że najlepszym
 Po przeczytaniu mnustwa artykułów i przeglądnięciu wielu platform z kursami, a także po poleceniu przez pewną osobę, wybrałam DareIt Challenge. 
 Forma zadań i uczenia się w czasie ich wykonywania bardzo mi odpowiada, dodatkowo w tej formie jestem w stanie pogodzić naukę z pracą.
 Już po tym pierwszym zadaniu jestem pozytywnie nastawiona i bardzo chętnie biorę sie do zadań.
-Mam nadzieję, że kurs pomoże mi rozpocząć moją przygodę z testowaniem. 
+Mam nadzieję, że kurs pomoże mi rozpocząć moją przygodę z testowaniem.
+
+
+*wynik z purpurowego testu: 9/14
