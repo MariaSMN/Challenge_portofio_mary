@@ -12,3 +12,48 @@ Mam nadzieję, że kurs pomoże mi rozpocząć moją przygodę z testowaniem.
 
 
 *wynik z purpurowego testu: 9/14
+
+Zadanie 2: selektory
+
+    login_xpath
+
+//*[@id="login"]
+
+//*[@id="login-label"]
+
+//*[@id="__next"]/form/div/div[1]/div[1]/div
+
+    password_xpath
+
+//*[@id="password"]
+
+//*[@id="password-label"]
+
+//*[@id="__next"]/form/div/div[1]/div[2]/div
+
+    remaind_password_hyperlink_xpath
+
+//*[@id="__next"]/form/div/div[1]/a
+
+//*[text()="Remind password"]
+
+    language_xpath
+
+//*[@id="__next"]/form/div/div[2]/div/input
+
+//*[@id="__next"]/form/div/div[2]/div/div
+
+//*[@id="__next"]/form/div/div[2]/div/svg
+
+    sign in_button_xpath
+
+//*[@id="__next"]/form/div/div[2]/button
+
+//*[@id="__next"]/form/div/div[2]/button/span[1]
+
+//*[@id="__next"]/form/div/div[2]/button/span[2]
+
+    Scouts panel_title_xpath
+
+//*[text()="Scouts Panel"]
+
