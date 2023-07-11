@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 
 
-class BasePage():
+class BasePage:
 
     def __init__(self, driver: WebDriver):
         self.driver = driver
@@ -12,3 +12,10 @@ class BasePage():
 
     def click_on_the_element(self, selector, selector_type=By.XPATH):
         return self.driver.find_element(selector_type, selector).click()
+
+    def get_page_title(self):
+        return self.driver.title
+
+    @classmethod
+    def setUp(cls, self):
+        pass
