@@ -21,12 +21,11 @@ class TestLoginPage(unittest.TestCase):
         os.chmod(DRIVER_PATH, 755)
         self.driver_service = Service(executable_path=DRIVER_PATH)
         self.driver = webdriver.Chrome(service=self.driver_service)
-        self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
+        self.driver.get('https://scouts-test.futbolkolektyw.pl/en/login/')
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
     def test_log_in_to_the_system(self):
-        pages.base_page.BasePage.setUp(self)
         user_login = LoginPage(self.driver)
         user_login.title_of_page()
         user_login.type_in_email('user02@getnada.com')

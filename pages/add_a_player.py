@@ -3,6 +3,11 @@ import time
 import unittest
 from selenium import webdriver
 
+
+class AddAPlayer:
+    pass
+
+
 from pages.add_a_player import AddAPlayer
 import pages.base_page
 from pages.dashboard import Dashboard
@@ -20,7 +25,7 @@ class TestDashboardPage(unittest.TestCase):
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
-    def test_add_a_player(self):
+    def test_add_player(self):
         pages.base_page.BasePage.setUp(self)
         user_login = LoginPage(self.driver)
         user_login.title_of_page()
@@ -29,7 +34,7 @@ class TestDashboardPage(unittest.TestCase):
         user_login.click_sign_in_button()
         time.sleep(5)
         dashboard_page = Dashboard(self.driver)
-        user_login.click_add_a_player_button()
+        user_login.click_add_player_button()
         time.sleep(5)
         add_a_player = AddAPlayer(self.driver)
         add_a_player.title_of_page()

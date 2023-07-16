@@ -4,11 +4,11 @@ from pages.base_page import BasePage
 
 class Dashboard(BasePage):
     expected_title = "Scouts panel"
-    dashboard_url = "http://scouts-test.futbolkolektyw.pl/en"
+    dashboard_url = "http://scouts-test.futbolkolektyw.pl/en/login"
 
     def title_of_page(self):
-        time.sleep(5)
-        assert self.get_page_title(self.dashboard_url) == self.expected_title
+        self.wait_for_element_to_be_clicsble()
+        assert self.get_page_title() == self.expected_title
 
     def click_add_player_button(self):
         self.click_on_the_element(self.addplayer_button_xpath)
