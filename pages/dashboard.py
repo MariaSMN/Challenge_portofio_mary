@@ -3,16 +3,16 @@ from pages.base_page import BasePage
 
 
 class Dashboard(BasePage):
-    expected_title = "Scouts panel"
+    expected_title = 'Scouts panel'
     dashboard_url = "http://scouts-test.futbolkolektyw.pl/en/login"
+    futbol_kolektyw_logo_xpath = '//*[@title="Logo Scouts Panel"]'
 
     def title_of_page(self):
-        self.wait_for_element_to_be_clicsble()
-        assert self.get_page_title() == self.expected_title
+        self.wait_for_element_to_be_clicable(self.futbol_kolektyw_logo_xpath)
+        assert self.get_page_title(self.dashboard_url) == self.expected_title
 
     def click_add_player_button(self):
         self.click_on_the_element(self.addplayer_button_xpath)
-
 
     playerscount_label_xpath = "//*[text()='Players']"
     matchescount_label_xpath = "//*[text()='Matches count']"
@@ -25,11 +25,5 @@ class Dashboard(BasePage):
     lastcreatedplayer_button_xpath = "//*[@id='__next']/div[1]/main/div[3]/div[3]/div/div/a[1]/button/span[1]"
     signout_button_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[2]/div[2]/div[2]/span"
 
-
-
-
-
-
-
-
-    pass
+    def wait_for_element_to_be_clicable(self):
+        pass

@@ -14,6 +14,7 @@ from selenium.webdriver.chrome.service import Service
 
 class TestLoginPage(unittest.TestCase):
 
+    driver_service = None
     driver = webdriver_manager.core.utils.windows_browser_apps_to_cmd()
 
     @classmethod
@@ -27,7 +28,6 @@ class TestLoginPage(unittest.TestCase):
 
     def test_log_in_to_the_system(self):
         user_login = LoginPage(self.driver)
-        user_login.title_of_page()
         user_login.type_in_email('user02@getnada.com')
         user_login.enter_password('Test-1234')
         user_login.click_sign_in_button()

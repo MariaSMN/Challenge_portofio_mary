@@ -12,6 +12,7 @@ class LoginPage(BasePage):
 
     def __init__(self, driver: WebDriver):
         super().__init__(driver)
+        self.addplayer_button_xpath = "//*[@id='__next']/div[1]/main/div[3]/div[2]/div/div/a/button/span[1]"
         self.expected_title = None
 
     def type_in_email(self, email):
@@ -31,4 +32,4 @@ class LoginPage(BasePage):
         self.click_on_the_element(self.sign_in_button_xpath)
 
     def click_add_player_button(self):
-        self.click_on_the_element(self.click_add_player_button)
+        self.click_on_the_element(self.addplayer_button_xpath)

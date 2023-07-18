@@ -1,3 +1,4 @@
+import self as self
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support import expected_conditions as EC
@@ -20,10 +21,14 @@ class BasePage:
     def get_page_title(self):
         return self.driver.title
 
-    def wait_for_element_to_be_clicsble(self, locator, locator_type=DEFAULT_LOCATOR_TYPE):
+    def wait_for_element_to_be_clicable(self, locator, locator_type=DEFAULT_LOCATOR_TYPE):
         wait = WebDriverWait(self.driver, 10)
         element = wait.until(EC.element_to_be_clickable((locator_type, locator)))
 
     @classmethod
     def setUp(cls, self):
         pass
+
+
+def tearDown(self):
+    return None
