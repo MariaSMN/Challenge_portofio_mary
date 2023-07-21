@@ -43,6 +43,25 @@ class TestDashboardPage(unittest.TestCase):
         add_a_player = AddAPlayer()
         add_a_player.title_of_page()
 
+    def test_add_player_data(self):
+        user_login = LoginPage(self.driver)
+        user_login.type_in_email('user02@getnada.com')
+        user_login.enter_password('Test-1234')
+        user_login.click_sign_in_button()
+        time.sleep(5)
+        dashboard_page = Dashboard(self.driver)
+        dashboard_page.title_of_page()
+        user_login.click_add_player_button()
+        time.sleep(5)
+        add_a_player = AddAPlayer()
+        add_a_player.title_of_page()
+        add_a_player.type_in_email('kowaljan@test.pl')
+        add_a_player.type_in_name('Jan')
+        add_a_player.type_in_surname('Kowal')
+        add_a_player.type_in_age('02.03.1994')
+        add_a_player.type_in_main_position('striker')
+        add_a_player.click_submit_button()
+
     @classmethod
     def tearDown(cls):
         cls.driver.quit()
