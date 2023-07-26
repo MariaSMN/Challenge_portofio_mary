@@ -9,6 +9,9 @@ class AddAPlayer:
     def title_of_page(self):
         pass
 
+    def type_in_name(self):
+        pass
+
 
 from pages.add_a_player import AddAPlayer
 import pages.base_page
@@ -55,7 +58,6 @@ class TestDashboardPage(unittest.TestCase):
         time.sleep(5)
         add_a_player = AddAPlayer()
         add_a_player.title_of_page()
-        add_a_player.type_in_email('kowaljan@test.pl')
         add_a_player.type_in_name('Jan')
         add_a_player.type_in_surname('Kowal')
         add_a_player.type_in_age('02.03.1994')
