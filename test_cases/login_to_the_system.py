@@ -13,18 +13,18 @@ from selenium.webdriver.chrome.service import Service
 
 
 class TestLoginPage(unittest.TestCase):
-
     driver_service = None
     driver = webdriver_manager.core.utils.windows_browser_apps_to_cmd()
 
     @classmethod
-    def setUp(self):
+    def setUp(cls):
         os.chmod(DRIVER_PATH, 755)
-        self.driver_service = Service(executable_path=DRIVER_PATH)
-        self.driver = webdriver.Chrome(service=self.driver_service)
-        self.driver.get('https://scouts-test.futbolkolektyw.pl/en/login/')
-        self.driver.fullscreen_window()
-        self.driver.implicitly_wait(IMPLICITLY_WAIT)
+        cls.driver_service = Service(executable_path=DRIVER_PATH)
+        cls.driver = webdriver.Chrome(service=cls.driver_service)
+        cls.driver.get('https://scouts-test.futbolkolektyw.pl/en/login/')
+        cls.driver.get('https://scouts-test.futbolkolektyw.pl/en')
+        cls.driver.fullscreen_window()
+        cls.driver.implicitly_wait(IMPLICITLY_WAIT)
 
     def test_log_in_to_the_system(self):
         user_login = LoginPage(self.driver)
@@ -34,9 +34,10 @@ class TestLoginPage(unittest.TestCase):
         time.sleep(5)
         dashboard_page = Dashboard(self.driver)
         dashboard_page.title_of_page()
-        pages.base_page.tearDown(self)
+        pages.base_page.teardown()
+        pages.base_page.BasePage.setup(self)
         time.sleep(5)
 
     @classmethod
-    def tearDown(self):
-        self.driver.quit()
+    def tearDown(cls):
+        cls.driver.quit()

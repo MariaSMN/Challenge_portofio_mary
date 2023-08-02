@@ -13,7 +13,7 @@ class LoginPage(BasePage):
     def __init__(self, driver: WebDriver):
         super().__init__(driver)
         self.addplayer_button_xpath = "//*[@id='__next']/div[1]/main/div[3]/div[2]/div/div/a/button/span[1]"
-        self.expected_title = None
+        self.expected_title = "Scouts Panel"
 
     def type_in_email(self, email):
         self.field_send_keys(self.login_field_xpath, email)
@@ -22,7 +22,7 @@ class LoginPage(BasePage):
         self.field_send_keys(self.password_field_xpath, password)
 
     def title_of_page(self):
-        test_title = self.get_page_title()
+        self.get_page_title()
         assert self.expected_title == self.get_page_title()
 
     def wait_for_button_will_be_clicable(self):
@@ -33,3 +33,6 @@ class LoginPage(BasePage):
 
     def click_add_player_button(self):
         self.click_on_the_element(self.addplayer_button_xpath)
+
+    def click_on_the_sign_in_button(self):
+        pass

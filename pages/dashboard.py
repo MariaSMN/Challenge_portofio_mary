@@ -1,10 +1,9 @@
-import time
 from pages.base_page import BasePage
 
 
 class Dashboard(BasePage):
-    expected_title = 'Scouts panel'
-    dashboard_url = "http://scouts-test.futbolkolektyw.pl/en/login"
+    expected_title: str = 'Scouts panel'
+    dashboard_url: str = 'http://scouts-test.futbolkolektyw.pl/en/login'
     futbol_kolektyw_logo_xpath = '//*[@title="Logo Scouts Panel"]'
 
     def title_of_page(self):
@@ -32,7 +31,6 @@ class Dashboard(BasePage):
     type_in_age_xpath = "//div[2]/div/div[7]/div/div/input"
     type_in_main_position_xpath = "//div[2]/div/div[11]/div/div/input"
     click_submit_button_xpath = "//div[2]/form/div[3]/button[1]/span[2]"
-
 
     def wait_for_element_to_be_clicable(self):
         pass
