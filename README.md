@@ -16,6 +16,7 @@ Mam nadzieję, że kurs pomoże mi rozpocząć moją przygodę z testowaniem.
 
 *wynik z purpurowego testu: 9/14
 
+
 Zadanie 2: selektory
 
     login_xpath
@@ -60,3 +61,6 @@ Zadanie 2: selektory
 
 //*[text()="Scouts Panel"]
 
+
+Link do google drive:
+https://drive.google.com/drive/folders/1h2hJQ1uB96KiAA4Hoh5FavbCxHukh5jt
