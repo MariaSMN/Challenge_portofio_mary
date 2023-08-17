@@ -2,13 +2,9 @@ from pages.base_page import BasePage
 
 
 class Dashboard(BasePage):
-    expected_title: str = 'Scouts panel'
-    dashboard_url: str = 'http://scouts-test.futbolkolektyw.pl/en/login'
+    expected_title: str = 'PANEL SKAUTINGOWY'
+    dashboard_url: str = 'https://dareit.futbolkolektyw.pl/en/'
     futbol_kolektyw_logo_xpath = '//*[@title="Logo Scouts Panel"]'
-
-    def title_of_page(self):
-        self.wait_for_element_to_be_clicable()
-        assert self.get_page_title() == self.expected_title
 
     def click_add_player_button(self):
         self.click_on_the_element(self.addplayer_button_xpath)
@@ -34,3 +30,7 @@ class Dashboard(BasePage):
 
     def wait_for_element_to_be_clicable(self):
         pass
+
+    def title_of_page(self):
+        self.wait_for_element_to_be_clicable()
+        assert self.expected_title == self.get_page_title()

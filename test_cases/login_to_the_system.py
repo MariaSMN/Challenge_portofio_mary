@@ -21,8 +21,8 @@ class TestLoginPage(unittest.TestCase):
         os.chmod(DRIVER_PATH, 755)
         cls.driver_service = Service(executable_path=DRIVER_PATH)
         cls.driver = webdriver.Chrome(service=cls.driver_service)
-        cls.driver.get('https://scouts-test.futbolkolektyw.pl/en/login/')
-        cls.driver.get('https://scouts-test.futbolkolektyw.pl/en')
+        cls.driver.get('https://dareit.futbolkolektyw.pl/en/')
+        cls.driver.get('https://dareit.futbolkolektyw.pl/en/')
         cls.driver.fullscreen_window()
         cls.driver.implicitly_wait(IMPLICITLY_WAIT)
 
@@ -36,7 +36,7 @@ class TestLoginPage(unittest.TestCase):
         dashboard_page.title_of_page()
         pages.base_page.teardown()
         pages.base_page.BasePage.setup(self)
-        time.sleep(5)
+        time.sleep(15)
 
     @classmethod
     def tearDown(cls):

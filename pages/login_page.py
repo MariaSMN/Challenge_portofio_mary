@@ -7,7 +7,7 @@ class LoginPage(BasePage):
     login_field_xpath = "//*[@id='login']"
     password_field_xpath = "//*[@id='password']"
     sign_in_button_xpath = '//span[1]'
-    login_url = 'https://scouts-test.futbolkolektyw.pl/en/login'
+    login_url = 'https://dareit.futbolkolektyw.pl/en/'
     add_player_button = "//div[1]/main/div[3]/div[2]/div/div/a/button/span[1]"
 
     def __init__(self, driver: WebDriver):

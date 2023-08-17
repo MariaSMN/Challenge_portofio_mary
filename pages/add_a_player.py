@@ -1,8 +1,8 @@
 import os
 import time
 import unittest
+
 from selenium import webdriver
-import dashboard
 
 
 class AddAPlayer:
@@ -12,9 +12,11 @@ class AddAPlayer:
     def type_in_name(self):
         pass
 
+    def click_submit_button(self):
+        pass
+
 
 from pages.add_a_player import AddAPlayer
-import pages.base_page
 from pages.dashboard import Dashboard
 from pages.login_page import LoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
@@ -29,7 +31,7 @@ class TestDashboardPage(unittest.TestCase):
         os.chmod(DRIVER_PATH, 755)
         self.driver_service = Service(executable_path=DRIVER_PATH)
         self.driver = webdriver.Chrome()
-        self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
+        self.driver.get('https://dareit.futbolkolektyw.pl/en/')
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
